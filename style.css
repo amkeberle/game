@@ -1,1 +1,17 @@
-
+body {background-color: lightblue;}
+      body {font-family: Verdana, sans-serif;}
+      h1 {
+        text-align: center;
+        font-family:Georgia, serif;
+      }
+   p {
+         margin-right: 150px;
+         margin-left: 150px;
+         text-indent: 20px;
+      }
+  h4 {
+        margin-right: 150px;
+        margin-left: 150px;
+        text-align: left;
+        font-family: Georgia, serif;
+      }
