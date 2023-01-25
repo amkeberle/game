@@ -5,12 +5,12 @@ body {background-color: lightgrey;}
         font-family:Georgia, serif;
       }
    p {
-         margin-right: 150px;
+         margin-right: 0px;
          margin-left: 150px;
          text-indent: 20px;
       }
   h4 {
-        margin-right: 150px;
+        margin-right: 0px;
         margin-left: 150px;
         text-align: left;
         font-family: Georgia, serif;
