@@ -15,3 +15,26 @@ body {background-color: lightgrey;}
         text-align: left;
         font-family: Georgia, serif;
       }
+
+  h2 {
+        text-align: center;
+      }
+
+  table {
+        text-align: center;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+  th, td {
+        padding: 8px;
+      }
+
+  td {
+        border: 1px solid;
+      }
+
+  .choice {
+        font-style: italic;
+      }
