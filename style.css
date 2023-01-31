@@ -64,3 +64,8 @@ body {background-color: lightgrey;}
 #topNav a:hover {
   color: purple;
 }
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
