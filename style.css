@@ -40,7 +40,7 @@ body {background-color: lightgrey;}
       }
 
 #topNav {
-  background: black;
+  background: black !important;
   box-shadow: 0px 1px 10px 10px lightgray;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
   height: auto;
@@ -64,7 +64,7 @@ body {background-color: lightgrey;}
   color: purple;
 }
 .header {
-  background-color: black;
+  background-color: black !important;
   text-color: white;
   text-align: center;
   padding: 20px;
