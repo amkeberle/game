@@ -66,6 +66,7 @@ body {background-color: lightgrey;}
 }
 .header {
   background-color: black;
+  text-color: white;
   text-align: center;
   padding: 20px;
 }
