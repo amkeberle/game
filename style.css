@@ -68,7 +68,10 @@ body {
 }
 header {
   background-color: black !important;
-  text-color: white;
   text-align: center;
   padding: 20px;
+}
+
+header h1 {
+  text-color: white;
 }
