@@ -63,7 +63,7 @@ body {background-color: lightgrey;}
 #topNav a:hover {
   color: purple;
 }
-.header {
+header {
   background-color: black !important;
   text-color: white;
   text-align: center;
