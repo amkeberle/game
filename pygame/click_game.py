@@ -17,3 +17,7 @@ def on_mouse_down(pos):
         print("Eek!")
     else:
         print("You missed me!")
+def on_mouse_down(pos):
+    if blob.collidepoint(pos):
+        sounds.eep.play()
+        blob.image = 'character2'
