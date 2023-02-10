@@ -1,3 +1,5 @@
+import time
+
 blob= Actor('character1')
 blob.position = 200, 200
 
@@ -19,5 +21,10 @@ def on_mouse_down(pos):
         print("You missed me!")
 def on_mouse_down(pos):
     if blob.collidepoint(pos):
-        sounds.eep.play()
-        blob.image = 'character2'
+        set_alien_hurt()
+
+def set_alien_hurt():
+    blob.image = 'character2'
+    sounds.eep.play()
+    clock.schedule_unique(set_alien_normal, 1.0)
+
