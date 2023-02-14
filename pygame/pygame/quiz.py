@@ -19,21 +19,32 @@ answer_boxes = [answer_box1, answer_box2, answer_box3, answer_box4]
 score = 0
 time_left = 10
 
-q1 = ["What is the capital of France?","London", "Paris", "Berlin", "Tokyo", 2]
-q2 = ["What is 5+7?","12", "10", "14", "8", 1]
-q3 = ["What is the seventh month of the year?","April", "May", "June", "July", 4]
-q4 = ["Which planet is closest to the Sun?","Saturn", "Neptune", "Mercury", "Venus", 3]
-q5 = ["Where are the pyramids?","India", "Egypt", "Morocco", "Canada", 2]
+q1 = ["What is the capital of France?", "London", "Paris", "Berlin", "Tokyo", 2]
+q2 = ["What is 5+7?", "12", "10", "14", "8", 1]
+q3 = ["What is the seventh month of the year?", "April", "May", "June", "July", 4]
+q4 = ["Which planet is closest to the Sun?", "Saturn", "Neptune", "Mercury", "Venus", 3]
+q5 = ["Where are the pyramids?", "India", "Egypt", "Morocco", "Canada", 2]
+q6 = ["What is a quarter of 200?", "50", "100", "25", "150", 1]
+q7 = [
+    "Which is the largest state in the USA?",
+    "Wyoming",
+    "Alaska",
+    "Florida",
+    "Texas",
+    2,
+]
+q8 = ["How many wives did Henry VIII have?", "Eight", "Four", "Six", "One", 3]
 
 questions = [q1, q2, q3, q4, q5]
 question = questions.pop(0)
 
+# Definitions
 def draw():
     screen.fill("dim gray")
-    screen.draw.filled_rect(main_box, "sky blue")
-    screen.draw.filled_rect(timer_box, "sky blue")
+    screen.draw.filled_rect(main_box, "pink")
+    screen.draw.filled_rect(timer_box, "pink")
     for box in answer_boxes:
-        screen.draw.filled_rect(box, "orange")
+        screen.draw.filled_rect(box, "light blue")
     screen.draw.textbox(str(time_left), timer_box, color=("black"))
     screen.draw.textbox(question[0], main_box, color=("black"))
 
@@ -42,11 +53,13 @@ def draw():
         screen.draw.textbox(question[index], box, color=("black"))
         index = index + 1
 
+
 def game_over():
     global question, time_left
     message = "Game over. You got %s questions correct" % str(score)
     question = [message, "-", "-", "-", "-", 5]
     time_left = 0
+
 
 def correct_answer():
     global question, score, time_left
@@ -58,14 +71,35 @@ def correct_answer():
         print("End of questions")
         game_over()
 
+
 def on_mouse_down(pos):
     index = 1
     for box in answer_boxes:
         if box.collidepoint(pos):
             print("Clicked on answer " + str(index))
+            if index == question[5]:
+                print("You got it correct!")
+                correct_answer()
+            else:
+                game_over()
         index = index + 1
 
+
 def update_time_left():
+    global time_left
+    if time_left:
+        time_left = time_left - 1
+    else:
+        game_over()
 
 
+def on_key_up(key):
+    global score
+    if key == keys.H:
+        print("The correct answer is box number %s " % question[5])
+    if key == keys.SPACE:
+        score = score - 1
+        correct_answer()
 
+
+clock.schedule_interval(update_time_left, 1.0)
