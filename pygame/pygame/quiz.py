@@ -1,6 +1,8 @@
+# General
 WIDTH = 1280
 HEIGHT = 720
 
+# Formatting
 main_box = Rect(0, 0, 820, 240)
 timer_box = Rect(0, 0, 240, 240)
 answer_box1 = Rect(0, 0, 495, 165)
@@ -19,6 +21,7 @@ answer_boxes = [answer_box1, answer_box2, answer_box3, answer_box4]
 score = 0
 time_left = 10
 
+# Questions
 q1 = ["What is the capital of France?", "London", "Paris", "Berlin", "Tokyo", 2]
 q2 = ["What is 5+7?", "12", "10", "14", "8", 1]
 q3 = ["What is the seventh month of the year?", "April", "May", "June", "July", 4]
